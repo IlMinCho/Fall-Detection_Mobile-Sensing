@@ -1,0 +1,151 @@
+﻿Group12_CS328 Project Ideas
+
+
+Writeup:
+        Our idea is to use fall detection to help those living on their own and the elderly who are at risk and would be safer with a monitoring device. We plan to use an accelerometer sensor and take the magnitude of the signal. Additionally, we might also use a gyroscope if we require more features to accurately determine a fall. We would first use a low pass filter to preserve low frequencies and remove high frequency movements and vibrations. A height threshold for peaks would be derived from a running mean and standard deviation from live data. We would look for a certain change in acceleration that looks large enough to be a fall. The fall should also be non-repeating and we will look for relatively little motion after the possible fall to confirm it. 
+        We would collect 100 fall data sets which would include different types of falls including walking then fall, standing fall, and sitting fall. We would also have 100 non fall sets which would include walking, jumping, sitting, and standing. We will[a][b][c] look into what position of the phone on the user’s body produces the best data (chest, pocket, etc.) and produce data in this position using the sensor app. 
+
+
+* What is your idea? 
+   * What does your mHealth application do and how it can positively impact the user’s health? (A couple of sentences)
+   * Fall detection would help those living on their own and the elderly who are at risk and would be safer with monitoring device
+* What sensors do you plan to use? 
+   * So far you have collected data from PPG and accelerometer sensors. Soon you will learn how to access audio and gyroscope. Which do you use to sense the user? (A couple of sentences)
+   * We would use an accelerometer sensor and take the magnitude of the signal
+   * We use a gyroscope sensor to measure the rotation when falling down and count it as a fall.
+* What signal processing do you plan to use? 
+   * Based on the sensors you plan to use, what signal features do you think are needed to sense the health metrics relevant to your idea. (Depends on complexity of your idea)
+   * Maybe use ema or sma window for smoothing
+   * Derive height threshold from running mean and standard deviation from live data
+   * Change in acceleration that looks like fall
+   * A fall should be non repeating
+   * Check for relatively little motion after the possible fall to confirm it
+   * Maybe use low pass filter to get rid of walking or other repeating motions
+   * Use combination of these features to detect a fall
+* How do you deliver data to the end user?
+   * Send message back to phone or use python to display fall alert
+* Other notes (not in presentation):
+   * ~100 fall data sets (different types of falls)
+      * Different types of falls could include walking then fall, sitting fall, etc. 
+   * ~100 non fall data sets (walking, jumping, sitting, standing, etc.)
+This could be data routed back to the phone through the backend (you will learn how to do this) or a python visualization on your laptop (A couple of sentence)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Project Proposal – Timeline
+
+
+
+
+Project Proposal – Present in class on March 22nd; finalized proposal on March 31st.
+
+
+* Goal: The goal of your project is to use real-time sensor streams from the phone app to implement a cool health-related application that builds on signal processing and machine learning primitives. 
+* Purpose of Proposal: Write a paragraph describing your idea so we can calibrate expectations. We will tell you if it is too hard!
+* Required elements: You are required to use some of the analytic methods learnt in class i.e. some Signal Processing/Machine Learning components are required.
+
+
+
+
+What should be in your project proposal?
+* What is your idea? 
+   * What does your mHealth application do and how it can positively impact the user’s health? (A couple of sentences)
+* What sensors do you plan to use? 
+   * So far you have collected data from PPG and accelerometer sensors. Soon you will learn how to access audio and gyroscope. Which do you use to sense the user? (A couple of sentences)
+* What signal processing do you plan to use? 
+   * Based on the sensors you plan to use, what signal features do you think are needed to sense the health metrics relevant to your idea. (Depends on complexity of your idea)
+* How do you deliver data to the end user?
+   * This could be data routed back to the phone through the backend (you will learn how to do this) or a python visualization on your laptop (A couple of sentence)
+
+
+Mid-project Review
+
+
+* Purpose: If your project was too hard, recalibrate expectations. Let us know what went wrong and how you plan to rescope your proposed work.
+* Content: Two-page report describing progress made so far. This won’t be graded in detail; it just needs to be turned in and counts towards participation. This can only help you in the final evaluation!
+
+
+Final Project Presentation
+
+
+* Demo your project for the class! You won’t be penalized if there are demo hiccups – just a cool opportunity to share and pitch your work (we might ask for a private demo later)
+* Short report that describes software implementations and reports on accuracy of metrics you are testing
+* Grading rubric will vary group by group according to the agreement after the mid-project report
+
+
+[a]maybe 4 cats total of 100
+[b]just use pocket
+[c]2 non fall sets each 100, 2 fall sets each 100, will be classifier and extracting features
